@@ -9,6 +9,17 @@ public class Employee {
 	private Integer age;
 	
 	private Double salary;
+	
+	public Employee(Long id, String fullName, Integer age, Double salary){
+		this.id = id;
+		this.fullName = fullName;
+		this.age = age;
+		this.salary = salary;
+	}
+	
+	public Employee(){
+		
+	}
 
 	public Long getId() {
 		return id;
@@ -40,6 +51,11 @@ public class Employee {
 
 	public void setSalary(Double salary) {
 		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", fullName=" + fullName + ", age=" + age + ", salary=" + salary + "]";
 	}
 	
 	
