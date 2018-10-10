@@ -31,6 +31,11 @@ public class EmployeeService {
 	@Autowired
 	AppConfigurator appConfig;
 
+	/**
+	 * read the json file and create the data as list
+	 * 
+	 * @return
+	 */
 	public List<Employee> readEmployee() {
 		String fileLocation = appConfig.getFolderPath() + appConfig.getFileName();
 		List<Employee> empList = null;
@@ -46,6 +51,12 @@ public class EmployeeService {
 
 	}
 
+	/**
+	 * write the list into file in json format
+	 * 
+	 * @param empList
+	 * @return
+	 */
 	public boolean writeEmployee(final List<Employee> empList) {
 		String fileLocation = appConfig.getFolderPath() + appConfig.getFileName();
 		boolean status = false;
@@ -59,6 +70,14 @@ public class EmployeeService {
 		return status;
 	}
 
+	/**
+	 * Filter the list based on the given criteria
+	 * 
+	 * @param empList
+	 * @param operator
+	 * @param value
+	 * @return
+	 */
 	public List<Employee> filterEmployee(final List<Employee> empList, final String operator, final int value) {
 		Predicate<Employee> byAge = null;
 		switch (operator) {
@@ -88,6 +107,13 @@ public class EmployeeService {
 		return filteredList;
 	}
 
+	/**
+	 * Sort the list for the given criteria
+	 * 
+	 * @param empList
+	 * @param sortType
+	 * @return
+	 */
 	public List<Employee> sortEmployee(final List<Employee> empList, final String sortType) {
 		Collections.sort(empList, new SortByAge(sortType));
 		return empList;
