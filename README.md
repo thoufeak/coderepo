@@ -67,5 +67,5 @@ To Run the Project
      
      Sample Data: in JSON Format (which needs to be deleted)
      {
-        "id": 6,
+        "id": 6
     }
