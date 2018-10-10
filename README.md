@@ -16,12 +16,18 @@ Prerequisite
 To Run the Project
 ==================
 1. Download the Project
-2. Update the config.properties to change the folder name and file
-  a. The folder and file will be created during the startup of the project
-  b. This file will be used for the sample data CRUD operation
+2. Update the config.properties file from the 'resources' folder to change the folder name and file
+
+    a. The folder and file will be created during the startup of the project
+    
+    b. This file will be used for the sample data CRUD operation
+  
 3. Run "mvn package" command from the command prompt
-  a. This will generate the ".war" file
+
+    a. This will generate the ".war" file
+  
 4. Deploy the generate war file in a web server
+
 5. Open the API Testing tool, and hit the url
 
     a. GET - To get all the available employee data
